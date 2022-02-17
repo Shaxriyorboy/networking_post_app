@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:networking/pages/create_page.dart';
+import 'package:networking/pages/edit_page.dart';
+import 'package:networking/pages/home_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage(),
+      routes: {
+        CreatePage.id:(context) => CreatePage(),
+        EditPage.id:(context) => EditPage(),
+      },
+    );
+  }
+}
+
